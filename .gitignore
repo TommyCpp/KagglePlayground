@@ -7,3 +7,6 @@
 *.iml
 out
 gen
+
+events.out.tfevents.*
+MNIST/data
