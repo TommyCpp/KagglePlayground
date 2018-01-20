@@ -10,3 +10,4 @@ gen
 
 events.out.tfevents.*
 MNIST/data
+*/.ipynb_checkpoints
