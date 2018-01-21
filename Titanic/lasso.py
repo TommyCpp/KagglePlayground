@@ -10,7 +10,7 @@ def _preprocessing(x):
 
 
 def train_Lasso():
-    data = read_data("./train.csv")
+    data, raw_data = read_data("./train.csv",)
     data = feature_engineer(data, raw_data)
     test_data = data.sample(frac=0.2)
     data.drop(test_data.index)
