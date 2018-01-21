@@ -11,6 +11,7 @@ def _preprocessing(x):
 
 def train_KNN(n_neighbour=5):
     data = read_data("./train.csv")
+    data = feature_engineer(data, raw_data)
     test_data = data.sample(frac=0.2)
     data.drop(test_data.index)
     data.iloc[:, 0] = data.iloc[:, 0].astype('int')

@@ -15,7 +15,7 @@ def feature_engineer(train_data, raw_data):
 def read_data(location: str, train_feature=['Survived', 'Pclass', 'Sex', 'Age', 'Fare']):
     df = pd.read_csv(location)
     train_data = df.loc[:, train_feature]  # type:DataFrame
-    return feature_engineer(train_data, df)
+    return train_data, df
 
 
 def read_test_data(test_feature):

@@ -5,11 +5,14 @@ from Titanic.io import *
 
 TEST_FEATURE = ['Pclass', 'Sex', 'Age', 'Fare']
 
+
 def _preprocessing(x):
     return preprocessing.scale(x)
 
+
 def train_adaboost():
     data = read_data("./train.csv")
+    data = feature_engineer(data, raw_data)
     test_data = data.sample(frac=0.2)
     data.drop(test_data.index)
     y = data.iloc[:, 0].as_matrix()
